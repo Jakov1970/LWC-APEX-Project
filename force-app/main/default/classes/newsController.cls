@@ -1,5 +1,6 @@
 public with sharing class newsController {
     
+    @AuraEnabled    
     public static Map<String, Object> retriveNews(){
         HttpRequest httpRequest = new HttpRequest();
         httpRequest.setEndpoint('http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=181d0f8389fc43eb8c1ec90f20444381');
